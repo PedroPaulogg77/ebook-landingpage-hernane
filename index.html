@@ -8,6 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@800&display=swap" rel="stylesheet">
+  
+  <!-- Performance: Preload Critical Assets -->
+  <link rel="preload" href="banner-mobile.webp" as="image" media="(max-width: 768px)">
+  <link rel="preload" href="banner-desktop.webp" as="image" media="(min-width: 769px)">
+  
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,8 +27,11 @@
     <div class="hero-orb hero-orb--blue"  aria-hidden="true"></div>
     <div class="hero-orb hero-orb--dark"  aria-hidden="true"></div>
 
-    <!-- Mobile: foto em cima, texto não vai sobre o rosto -->
-    <div class="hero-photo" aria-hidden="true"></div>
+    <!-- Optimized Hero Image (LCP) -->
+    <picture class="hero-picture">
+      <source srcset="banner-mobile.webp" media="(max-width: 768px)">
+      <img src="banner-desktop.webp" alt="Hernane Ferreira — Do Zero às Duas Academias" class="hero-img" fetchpriority="high" width="1920" height="1080">
+    </picture>
 
     <div class="hero-inner">
       <p class="eyebrow">Para quem acredita que dá para construir algo do zero</p>
@@ -268,9 +276,13 @@
         <div class="mockup-wrap" data-reveal="left">
           <div class="mockup-glow" aria-hidden="true"></div>
           <img
-            src="freepik_br_bff64527-be7b-4266-a57c-e9128dfb9d3b.webp"
+            src="mockup.webp"
             alt="E-book Do Zero às Duas Academias em tablet"
-            class="mockup-img">
+            class="mockup-img"
+            loading="lazy"
+            decoding="async"
+            width="800"
+            height="800">
         </div>
 
         <div class="pricing-card" data-reveal="right" data-delay="1">
