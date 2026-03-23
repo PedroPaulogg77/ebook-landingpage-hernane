@@ -33,10 +33,13 @@
     .mobile-break { display: block; }
     .desktop-break { display: none; }
     @media (min-width: 768px) {
-      .hero-inner { max-width: 820px !important; text-align: left !important; align-items: flex-start !important; padding-left: 0 !important; margin-left: 0 !important; }
+      .hero-inner { max-width: 720px !important; padding: 0 0 0 52px !important; text-align: left !important; align-items: flex-start !important; }
       .hero-inner .eyebrow { margin-left: 0 !important; margin-right: auto !important; }
       .mobile-break { display: inline; }
       .desktop-break { display: block; }
+    }
+    @media (min-width: 1024px) {
+      .hero-inner { max-width: 820px !important; padding-left: 84px !important; }
     }
   </style>
 </head>
