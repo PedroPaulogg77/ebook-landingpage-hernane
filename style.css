@@ -183,6 +183,13 @@ p  { color: var(--gray-2); }
   margin-right: auto;
 }
 
+.mobile-break { display: block; }
+.desktop-break { display: none; }
+@media (min-width: 768px) {
+  .mobile-break { display: inline; }
+  .desktop-break { display: block; }
+}
+
 /* ============================================
    SCROLL REVEAL
    ============================================ */
@@ -1074,7 +1081,7 @@ figcaption span   { font-size: 12px; color: var(--gray-3); }
     padding: 0 0 0 52px;
     text-align: left;
     align-items: flex-start;
-    max-width: 560px;
+    max-width: 720px;
   }
 
   .hero h1     { font-size: 3.1rem; }
@@ -1140,8 +1147,8 @@ figcaption span   { font-size: 12px; color: var(--gray-3); }
   h2 { font-size: 2.2rem; }
   body { font-size: 16px; }
 
-  .hero h1    { font-size: 3.9rem; text-transform: uppercase; }
-  .hero-inner { padding-left: 84px; max-width: 640px; }
+  .hero h1 { font-size: 3.4rem; text-transform: uppercase; }
+  .hero-inner { padding-left: 84px; max-width: 820px; }
 
   /* Chapters 2-col */
   .chapters-list {

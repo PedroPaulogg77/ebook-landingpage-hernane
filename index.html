@@ -30,11 +30,12 @@
     .btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 9px; background: linear-gradient(90deg, var(--blue-dark), var(--blue), var(--blue-light), var(--blue)); background-size: 300% 100%; color: var(--black); font-family: var(--font-head); font-weight: 800; font-size: 0.82rem; padding: 17px 28px; border-radius: var(--r-md); box-shadow: 0 4px 28px rgba(0,180,224,0.28); text-transform: uppercase; }
     @keyframes heroIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
     .hero-inner > * { animation: heroIn 0.6s var(--ease-out) both; }
-    .hide-desktop { display: block; }
-    .hide-mobile { display: none; }
+    .mobile-break { display: block; }
+    .desktop-break { display: none; }
     @media (min-width: 768px) {
-      .hide-desktop { display: none; }
-      .hide-mobile { display: block; }
+      .hero-inner { max-width: 720px !important; }
+      .mobile-break { display: inline; }
+      .desktop-break { display: block; }
     }
   </style>
 </head>
@@ -55,8 +56,8 @@
 
     <div class="hero-inner">
       <p class="eyebrow">Para quem acredita que dá para construir algo do zero</p>
-      <h1>Do zero a dono de <br class="hide-desktop"><span class="accent">duas academias.</span></h1>
-      <p class="hero-sub">Hernane Ferreira largou o emprego, apostou tudo que tinha e construiu dois negócios do zero &mdash; sem experiência, <br class="hide-mobile">sem capital e passando por pandemia. Este e-book conta tudo que ele fez, erro por erro.</p>
+      <h1>Do zero a dono de <span class="mobile-break accent">duas academias.</span></h1>
+      <p class="hero-sub">Hernane Ferreira largou o emprego, apostou tudo que tinha e construiu dois negócios do zero &mdash; <span class="mobile-break">sem experiência, sem capital e passando por pandemia.</span> Este e-book conta tudo que ele fez, erro por erro.</p>
       <a href="https://pay.kiwify.com.br/ECzx5TE" class="btn-primary hero-cta">
         Quero o e-book por R$ 67
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
