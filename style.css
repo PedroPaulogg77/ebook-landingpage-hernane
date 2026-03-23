@@ -66,13 +66,12 @@ ul, ol { list-style: none; }
 h1, h2, h3 {
   font-family: var(--font-head);
   font-weight: 800;
-  text-transform: uppercase;
   color: var(--white);
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
 
-h1 { font-size: 2.35rem; }
+h1 { font-size: 2.35rem; text-transform: uppercase; }
 h2 { font-size: 1.55rem; margin-bottom: 20px; }
 h3 { font-size: 0.875rem; letter-spacing: 0em; }
 
@@ -143,7 +142,8 @@ p  { color: var(--gray-2); }
    PILL LABELS
    ============================================ */
 .label {
-  display: inline-flex;
+  display: flex;
+  width: fit-content;
   align-items: center;
   justify-content: center;
   font-size: 10px;
@@ -156,16 +156,17 @@ p  { color: var(--gray-2); }
   padding: 5px 16px;
   border-radius: 999px;
   margin-bottom: 16px;
-  /* Centre in block context on mobile */
+  /* Sempre centrado no mobile */
   margin-left: auto;
   margin-right: auto;
 }
 
-.label-center { display: flex; justify-content: center; }
+.label-center { margin-left: auto; margin-right: auto; }
 .label-muted  { color: var(--gray-3); background: rgba(255,255,255,0.03); border-color: var(--border); }
 
 .eyebrow {
-  display: inline-flex;
+  display: flex;
+  width: fit-content;
   align-items: center;
   justify-content: center;
   font-size: 10px;
@@ -178,6 +179,8 @@ p  { color: var(--gray-2); }
   padding: 5px 16px;
   border-radius: 999px;
   margin-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ============================================
@@ -351,6 +354,7 @@ p  { color: var(--gray-2); }
   font-size: 2.35rem;
   margin-top: 8px;
   margin-bottom: 14px;
+  text-transform: uppercase;
 }
 
 .hero-sub {
@@ -1081,9 +1085,11 @@ figcaption span   { font-size: 12px; color: var(--gray-3); }
 
   /* Sections: left-align de volta */
   .section h2, .section h3, .section p { text-align: left; }
-  .label { margin-left: 0; margin-right: 0; justify-content: flex-start; }
 
-  /* Keep centred: narrow wrap, offer, cta, garantia */
+  /* Labels viram left por padrão no desktop */
+  .label { margin-left: 0; margin-right: 0; }
+
+  /* Mantém centrado nos blocos centrais */
   .wrap-narrow h2,
   .wrap-narrow p,
   .bg-offer h2,
@@ -1104,7 +1110,6 @@ figcaption span   { font-size: 12px; color: var(--gray-3); }
   .label-center {
     margin-left: auto;
     margin-right: auto;
-    justify-content: center;
   }
 
   .stats-grid { grid-template-columns: repeat(4, 1fr); }
@@ -1135,7 +1140,7 @@ figcaption span   { font-size: 12px; color: var(--gray-3); }
   h2 { font-size: 2.2rem; }
   body { font-size: 16px; }
 
-  .hero h1    { font-size: 3.9rem; }
+  .hero h1    { font-size: 3.9rem; text-transform: uppercase; }
   .hero-inner { padding-left: 84px; max-width: 640px; }
 
   /* Chapters 2-col */
