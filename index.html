@@ -25,21 +25,21 @@
     .hero { display: flex; flex-direction: column; position: relative; }
     .hero-photo { width: 100%; height: 72vw; min-height: 240px; max-height: 420px; background: url('banner-mobile.jpg') center top / cover; position: relative; }
     .hero-photo::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 55%; background: linear-gradient(to top, var(--black) 0%, transparent 100%); }
-    .hero-inner { display: flex; flex-direction: column; padding: 16px 22px 52px; text-align: center; align-items: center; }
+    .hero-inner { display: flex; flex-direction: column; padding: 16px 0 52px; text-align: center; align-items: center; width: 100%; }
     .eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--blue); background: rgba(0,180,224,0.08); border: 1px solid rgba(0,180,224,0.22); padding: 5px 16px; border-radius: 999px; margin: 0 auto 16px; width: fit-content; }
     .btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 9px; background: linear-gradient(90deg, var(--blue-dark), var(--blue), var(--blue-light), var(--blue)); background-size: 300% 100%; color: var(--black); font-family: var(--font-head); font-weight: 800; font-size: 0.82rem; padding: 17px 28px; border-radius: var(--r-md); box-shadow: 0 4px 28px rgba(0,180,224,0.28); text-transform: uppercase; }
     @keyframes heroIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
     .hero-inner > * { animation: heroIn 0.6s var(--ease-out) both; }
-    .mobile-break { display: block; }
-    .desktop-break { display: none; }
+    .hide-desktop { display: inline; }
+    .hide-mobile { display: none; }
     @media (min-width: 768px) {
-      .hero-inner { max-width: 720px !important; padding: 0 0 0 52px !important; text-align: left !important; align-items: flex-start !important; }
+      .hero-inner { max-width: 720px !important; padding: 0 !important; text-align: left !important; align-items: flex-start !important; }
       .hero-inner .eyebrow { margin-left: 0 !important; margin-right: auto !important; }
-      .mobile-break { display: inline; }
-      .desktop-break { display: block; }
+      .hide-desktop { display: none; }
+      .hide-mobile { display: block; }
     }
     @media (min-width: 1024px) {
-      .hero-inner { max-width: 820px !important; padding-left: 84px !important; }
+      .hero-inner { max-width: 820px !important; }
     }
   </style>
 </head>
@@ -58,10 +58,11 @@
     <!-- Mobile: foto em cima, texto não vai sobre o rosto -->
     <div class="hero-photo" aria-hidden="true"></div>
 
-    <div class="hero-inner">
-      <p class="eyebrow">Para quem acredita que dá para construir algo do zero</p>
-      <h1>Do zero a dono de <span class="mobile-break accent">duas academias.</span></h1>
-      <p class="hero-sub">Hernane Ferreira largou o emprego, apostou tudo que tinha e construiu dois negócios do zero &mdash; <span class="mobile-break">sem experiência, sem capital e passando por pandemia.</span> Este e-book conta tudo que ele fez, erro por erro.</p>
+    <div class="wrap" style="width: 100%; z-index: 2;">
+      <div class="hero-inner">
+        <p class="eyebrow">Para quem acredita que dá para construir algo do zero</p>
+        <h1>Do zero a <br class="hide-mobile">dono de duas <br><span class="accent">academias.</span></h1>
+        <p class="hero-sub">Hernane Ferreira largou o emprego, apostou tudo que tinha e construiu dois negócios do zero &mdash; <br class="hide-desktop">sem experiência, sem capital e passando por pandemia. Este e-book conta tudo que ele fez, erro por erro.</p>
       <a href="https://pay.kiwify.com.br/ECzx5TE" class="btn-primary hero-cta">
         Quero o e-book por R$ 67
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -70,6 +71,7 @@
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
         Entrega imediata · Acesso pelo celular
       </p>
+      </div>
     </div>
   </section>
 
