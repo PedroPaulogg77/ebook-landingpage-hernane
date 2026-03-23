@@ -8,12 +8,35 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@800&display=swap" rel="stylesheet">
-  
-  <!-- Performance: Preload Critical Assets -->
-  <link rel="preload" href="banner-mobile.webp" as="image" media="(max-width: 768px)">
-  <link rel="preload" href="banner-desktop.webp" as="image" media="(min-width: 769px)">
-  
-  <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="style.css" as="style">
+  <link rel="preload" href="freepik_br_bff64527-be7b-4266-a57c-e9128dfb9d3b.png" as="image" fetchpriority="high" media="(max-width: 768px)">
+  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+
+  <style>
+    /* CRITICAL CSS */
+    :root { --black: #06060f; --black-alt: #09091a; --blue: #00b4e0; --blue-light: #29ccf5; --blue-dark: #0090b8; --white: #ffffff; --gray-1: #c8ccd8; --font-head: 'Sora', sans-serif; --font-body: 'Inter', sans-serif; --r-md: 12px; --ease-out: cubic-bezier(0.22, 1, 0.36, 1); }
+    *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; background: var(--black); }
+    body { font-family: var(--font-body); font-size: 15px; color: var(--gray-1); background: var(--black); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    h1,h2 { font-family: var(--font-head); font-weight: 800; color: var(--white); line-height: 1.1; letter-spacing: -0.02em; text-transform: uppercase; }
+    h1 { font-size: clamp(2rem, 8vw, 2.35rem); }
+    .accent { background: linear-gradient(120deg, var(--white) 10%, var(--blue-light) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero { display: flex; flex-direction: column; position: relative; }
+    .hero-photo { width: 100%; height: 72vw; min-height: 240px; max-height: 420px; background: url('banner-mobile.jpg') center top / cover; position: relative; }
+    .hero-photo::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 55%; background: linear-gradient(to top, var(--black) 0%, transparent 100%); }
+    .hero-inner { padding: 16px 22px 52px; text-align: center; }
+    .eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--blue); background: rgba(0,180,224,0.08); border: 1px solid rgba(0,180,224,0.22); padding: 5px 16px; border-radius: 999px; margin: 0 auto 16px; width: fit-content; }
+    .btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 9px; background: linear-gradient(90deg, var(--blue-dark), var(--blue), var(--blue-light), var(--blue)); background-size: 300% 100%; color: var(--black); font-family: var(--font-head); font-weight: 800; font-size: 0.82rem; padding: 17px 28px; border-radius: var(--r-md); box-shadow: 0 4px 28px rgba(0,180,224,0.28); text-transform: uppercase; }
+    @keyframes heroIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+    .hero-inner > * { animation: heroIn 0.6s var(--ease-out) both; }
+    .hide-desktop { display: block; }
+    .hide-mobile { display: none; }
+    @media (min-width: 768px) {
+      .hide-desktop { display: none; }
+      .hide-mobile { display: block; }
+    }
+  </style>
 </head>
 <body>
 
@@ -27,16 +50,13 @@
     <div class="hero-orb hero-orb--blue"  aria-hidden="true"></div>
     <div class="hero-orb hero-orb--dark"  aria-hidden="true"></div>
 
-    <!-- Optimized Hero Image (LCP) -->
-    <picture class="hero-picture">
-      <source srcset="banner-mobile.webp" media="(max-width: 768px)">
-      <img src="banner-desktop.webp" alt="Hernane Ferreira — Do Zero às Duas Academias" class="hero-img" fetchpriority="high" width="1920" height="1080">
-    </picture>
+    <!-- Mobile: foto em cima, texto não vai sobre o rosto -->
+    <div class="hero-photo" aria-hidden="true"></div>
 
     <div class="hero-inner">
       <p class="eyebrow">Para quem acredita que dá para construir algo do zero</p>
-      <h1>Do zero a dono de <span class="accent">duas academias.</span></h1>
-      <p class="hero-sub">Hernane Ferreira largou o emprego, apostou tudo que tinha e construiu dois negócios do zero — sem experiência, sem capital e passando por pandemia. Este e-book conta tudo que ele fez, erro por erro.</p>
+      <h1>Do zero a dono de <br class="hide-desktop"><span class="accent">duas academias.</span></h1>
+      <p class="hero-sub">Hernane Ferreira largou o emprego, apostou tudo que tinha e construiu dois negócios do zero &mdash; sem experiência, <br class="hide-mobile">sem capital e passando por pandemia. Este e-book conta tudo que ele fez, erro por erro.</p>
       <a href="https://pay.kiwify.com.br/ECzx5TE" class="btn-primary hero-cta">
         Quero o e-book por R$ 67
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -52,7 +72,7 @@
   <section class="section bg-alt" id="problema">
     <div class="wrap">
       <p class="label" data-reveal>Isso te parece familiar?</p>
-      <h2 data-reveal data-delay="1">Você trabalha demais, se dedica de verdade. Mas no final do mês o dinheiro some.</h2>
+      <h2 data-reveal data-delay="1">Você trabalha demais, se dedica de verdade. <br class="hide-mobile">Mas no final do mês o dinheiro some.</h2>
 
       <ul class="pain-list stagger" data-reveal>
         <li>
@@ -108,7 +128,7 @@
   <section class="section bg-alt" id="hernane">
     <div class="wrap wrap-narrow">
       <p class="label" data-reveal>Quem é Hernane Ferreira</p>
-      <h2 data-reveal data-delay="1">Ele não veio de família rica. Não teve investidor. Não tinha experiência.</h2>
+      <h2 data-reveal data-delay="1">Ele não veio de família rica. <br class="hide-mobile">Não teve investidor. Não tinha experiência.</h2>
 
       <div class="about-body stagger" data-reveal>
         <p>Cresceu com a mãe sem emprego, morou de favor até os 17 anos e passou por mais de 7 empregos diferentes antes de entrar em uma academia pela primeira vez.</p>
@@ -276,9 +296,11 @@
         <div class="mockup-wrap" data-reveal="left">
           <div class="mockup-glow" aria-hidden="true"></div>
           <img
-            src="mockup.webp"
+            src="freepik_br_bff64527-be7b-4266-a57c-e9128dfb9d3b.png"
             alt="E-book Do Zero às Duas Academias em tablet"
             class="mockup-img"
+            width="600"
+            height="420"
             loading="lazy"
             decoding="async">
         </div>
