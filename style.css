@@ -1026,29 +1026,32 @@ figcaption span   { font-size: 12px; color: var(--gray-3); }
   h1 { font-size: 2.9rem; }
   h2 { font-size: 2rem; }
 
-  /* ── Hero Desktop Fix ── */
   .hero {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
-    background-image: none !important; /* Ensure no tiling/legacy bg */
+    background: var(--black) !important;
   }
 
   .hero-picture {
     position: absolute;
     inset: 0;
+    width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: 1;
   }
 
   .hero-img {
     width: 100%;
     height: 100%;
-    max-height: none;
     object-fit: cover !important;
-    object-position: right center;
+    object-position: center center;
+    max-width: none;
+    max-height: none;
   }
 
   /* Fade desktop: horizontal */
@@ -1057,8 +1060,8 @@ figcaption span   { font-size: 12px; color: var(--gray-3); }
     background: linear-gradient(
       to right,
       var(--black) 0%,
-      rgba(6,6,15,0.96) 24%,
-      rgba(6,6,15,0.3) 60%,
+      rgba(6,6,15,0.92) 20%,
+      rgba(6,6,15,0.4) 50%,
       transparent 100%
     );
   }
@@ -1098,11 +1101,19 @@ figcaption span   { font-size: 12px; color: var(--gray-3); }
 
   .hero-inner {
     position: relative;
-    z-index: 2;
-    padding: 0 0 0 52px;
+    z-index: 10;
+    padding: 60px 22px;
     text-align: left;
     align-items: flex-start;
-    max-width: 560px;
+    max-width: 1100px;
+    width: 100%;
+  }
+
+  .hero-inner .eyebrow,
+  .hero-inner h1,
+  .hero-inner p {
+    text-align: left;
+    margin-left: 0;
   }
 
   .hero h1     { font-size: 3.1rem; }
