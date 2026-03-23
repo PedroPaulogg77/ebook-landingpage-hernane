@@ -14,26 +14,28 @@
 
   <!-- ====== HERO ====== -->
   <section class="hero" id="topo">
-    <div class="hero-overlay"></div>
 
-    <!-- Decorative orbs -->
-    <div class="orb orb-blue" style="width:420px;height:420px;bottom:-60px;left:-100px;opacity:.5;"></div>
-    <div class="orb orb-dark" style="width:300px;height:300px;top:10%;right:-80px;opacity:.7;"></div>
+    <!-- Desktop: overlay sobre background-image -->
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <!-- Desktop: orbs decorativos -->
+    <div class="hero-orb hero-orb--blue"  aria-hidden="true"></div>
+    <div class="hero-orb hero-orb--dark"  aria-hidden="true"></div>
+
+    <!-- Mobile: foto em cima, texto não vai sobre o rosto -->
+    <div class="hero-photo" aria-hidden="true"></div>
 
     <div class="hero-inner">
       <p class="eyebrow">Para personal trainers e empreendedores do fitness</p>
-      <h1>
-        De personal trainer<br>a dono de
-        <span class="accent">duas academias.</span>
-      </h1>
+      <h1>De personal trainer a dono de <span class="accent">duas academias.</span></h1>
       <p class="hero-sub">Hernane Ferreira largou o emprego, apostou tudo que tinha e construiu dois negócios fitness do zero — sem experiência, sem capital e passando por pandemia.</p>
-      <a href="#oferta" class="btn-primary">
+      <a href="#oferta" class="btn-primary hero-cta">
         Quero o e-book por R$ 67
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
       <p class="hero-trust">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-        Entrega imediata &nbsp;·&nbsp; Acesso pelo celular
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        Entrega imediata · Acesso pelo celular
       </p>
     </div>
   </section>
@@ -44,20 +46,20 @@
       <p class="label" data-reveal>Isso te parece familiar?</p>
       <h2 data-reveal data-delay="1">Você treina, ensina e trabalha muito. Mas no final do mês o dinheiro some.</h2>
 
-      <ul class="pain-list">
-        <li data-reveal data-delay="2">
+      <ul class="pain-list stagger" data-reveal>
+        <li>
           <div class="pain-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           </div>
           <p>Você troca hora por dinheiro — e quando para de trabalhar, para de ganhar</p>
         </li>
-        <li data-reveal data-delay="3">
+        <li>
           <div class="pain-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           </div>
           <p>Você sente que está construindo o sonho de outro dono de academia</p>
         </li>
-        <li data-reveal data-delay="4">
+        <li>
           <div class="pain-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           </div>
@@ -65,7 +67,7 @@
         </li>
       </ul>
 
-      <p class="callout-text" data-reveal data-delay="5">Hernane estava exatamente nesse lugar. E encontrou uma saída que poucas pessoas acreditavam ser possível para alguém da região metropolitana de BH.</p>
+      <p class="callout-text" data-reveal>Hernane estava exatamente nesse lugar. E encontrou uma saída que poucas pessoas acreditavam ser possível para alguém da região metropolitana de BH.</p>
     </div>
   </section>
 
@@ -73,20 +75,20 @@
   <section class="section bg-main" id="numeros">
     <div class="wrap">
       <p class="label" data-reveal>A trajetória em números</p>
-      <div class="stats-grid">
-        <div class="stat-item" data-reveal data-delay="1">
+      <div class="stats-grid stagger" data-reveal>
+        <div class="stat-item">
           <span class="stat-num" data-counter data-target="0" data-prefix="R$ ">R$ 0</span>
           <p>Capital disponível quando decidiu empreender</p>
         </div>
-        <div class="stat-item" data-reveal data-delay="2">
+        <div class="stat-item">
           <span class="stat-num" data-counter data-target="2" data-suffix=" anos">2 anos</span>
           <p>Reinvestindo 100% sem tirar nada para si</p>
         </div>
-        <div class="stat-item" data-reveal data-delay="3">
+        <div class="stat-item">
           <span class="stat-num" data-counter data-target="2" data-suffix=" un.">2 un.</span>
           <p>Uma mista e uma exclusiva feminina</p>
         </div>
-        <div class="stat-item" data-reveal data-delay="4">
+        <div class="stat-item">
           <span class="stat-num" data-counter data-target="500" data-suffix="+">500+</span>
           <p>Alunos ativos entre as duas academias hoje</p>
         </div>
@@ -100,13 +102,13 @@
       <p class="label" data-reveal>Quem é Hernane Ferreira</p>
       <h2 data-reveal data-delay="1">Ele não veio de família rica. Não teve investidor. Não tinha experiência.</h2>
 
-      <div class="about-body">
-        <p data-reveal data-delay="2">Cresceu com a mãe sem emprego, morou de favor até os 17 anos e passou por mais de 7 empregos diferentes antes de entrar em uma academia pela primeira vez.</p>
-        <p data-reveal data-delay="3">Virou personal trainer. Depois fisiculturista. Depois empresário.</p>
-        <p data-reveal data-delay="4">Hoje tem duas academias em Ibirité, uma equipe que gere o dia a dia, e liberdade para competir e viajar enquanto o negócio continua funcionando.</p>
+      <div class="about-body stagger" data-reveal>
+        <p>Cresceu com a mãe sem emprego, morou de favor até os 17 anos e passou por mais de 7 empregos diferentes antes de entrar em uma academia pela primeira vez.</p>
+        <p>Virou personal trainer. Depois fisiculturista. Depois empresário.</p>
+        <p>Hoje tem duas academias em Ibirité, uma equipe que gere o dia a dia, e liberdade para competir e viajar enquanto o negócio continua funcionando.</p>
       </div>
 
-      <blockquote data-reveal data-delay="5">
+      <blockquote data-reveal data-delay="1">
         "Fiquei 2 anos sem comprar um par de chinelo para reinvestir tudo na academia. Valeu cada dia."
       </blockquote>
     </div>
@@ -118,7 +120,7 @@
       <p class="label" data-reveal>O que você vai aprender</p>
       <h2 data-reveal data-delay="1">8 capítulos. A jornada completa. Sem esconder os erros.</h2>
 
-      <ol class="chapters-list" data-reveal data-delay="2">
+      <ol class="chapters-list stagger" data-reveal>
         <li>
           <span class="ch-num">01</span>
           <div>
@@ -165,7 +167,7 @@
           <span class="ch-num">07</span>
           <div>
             <h3>Como o negócio funciona sem você</h3>
-            <p>A estrutura de equipe que permite viajar e competir enquanto a academia gera receita.</p>
+            <p>A estrutura de equipe que permite viajar enquanto a academia gera receita.</p>
           </div>
         </li>
         <li>
@@ -177,7 +179,7 @@
         </li>
       </ol>
 
-      <div class="bonus-strip" data-reveal data-delay="3">
+      <div class="bonus-strip" data-reveal>
         <span class="bonus-tag">+ Bônus</span>
         <p>Ao final de cada capítulo, uma atividade prática para você aplicar no seu negócio. Não é só leitura. <strong>É ação.</strong></p>
       </div>
@@ -227,7 +229,7 @@
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-              <span>Você não está disposto a reinvestir no negócio nos primeiros anos</span>
+              <span>Você não está disposto a reinvestir nos primeiros anos</span>
             </li>
           </ul>
         </div>
@@ -240,7 +242,7 @@
     <div class="wrap wrap-narrow">
       <p class="label" data-reveal>Quem aprendeu com o Hernane também chegou lá</p>
 
-      <figure class="testimonial" data-reveal="scale" data-delay="1">
+      <figure class="testimonial" data-reveal="scale">
         <blockquote class="testimonial-quote">
           "Entrei na Área 51 com 19 anos, vindo de uma distribuidora de bebidas. Saí com 22 anos e minha própria academia."
         </blockquote>
@@ -259,12 +261,12 @@
   <!-- ====== OFERTA ====== -->
   <section class="section bg-offer" id="oferta">
     <div class="wrap">
-      <p class="label" data-reveal style="margin-left:auto;margin-right:auto;">Investimento</p>
-      <h2 style="text-align:center;" data-reveal data-delay="1">Tudo isso por menos do que uma suplementação mensal.</h2>
+      <p class="label label-center" data-reveal>Investimento</p>
+      <h2 class="text-center" data-reveal data-delay="1">Tudo isso por menos do que uma suplementação mensal.</h2>
 
       <div class="offer-layout">
         <div class="mockup-wrap" data-reveal="left">
-          <div class="mockup-glow"></div>
+          <div class="mockup-glow" aria-hidden="true"></div>
           <img
             src="freepik_br_bff64527-be7b-4266-a57c-e9128dfb9d3b.webp"
             alt="E-book Do Zero às Duas Academias em tablet"
@@ -281,7 +283,7 @@
             <div class="price-main">R$&thinsp;67</div>
             <p class="price-terms">à vista no Pix ou cartão</p>
 
-            <ul class="features-list">
+            <ul class="features-list stagger" data-reveal>
               <li>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
                 E-book com 8 capítulos completos
@@ -306,7 +308,7 @@
 
             <a href="#" class="btn-primary btn-full">
               Quero acessar agora
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
           </div>
         </div>
@@ -316,12 +318,12 @@
 
   <!-- ====== GARANTIA ====== -->
   <section class="section bg-main" id="garantia">
-    <div class="wrap wrap-narrow" style="text-align:center;">
+    <div class="wrap wrap-narrow center-block">
       <div class="guarantee-icon" data-reveal="scale">
         <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
       </div>
-      <p class="label" data-reveal style="justify-content:center;">Sem risco para você</p>
-      <h2 data-reveal data-delay="1" style="text-align:center;">7 dias de garantia incondicional.</h2>
+      <p class="label label-center" data-reveal>Sem risco para você</p>
+      <h2 class="text-center" data-reveal data-delay="1">7 dias de garantia incondicional.</h2>
       <p class="guarantee-text" data-reveal data-delay="2">Leu o e-book e achou que não valeu o investimento? Manda uma mensagem em até 7 dias e devolvemos 100% do valor. Sem pergunta, sem burocracia.</p>
       <p class="guarantee-emphasis" data-reveal data-delay="3">Você não tem nada a perder. Só a ler.</p>
     </div>
@@ -329,10 +331,10 @@
 
   <!-- ====== CTA MID ====== -->
   <section class="section bg-cta-mid" id="decisao">
-    <div class="wrap wrap-narrow" style="text-align:center;">
-      <h2 data-reveal style="text-align:center;">A história do Hernane já foi escrita. A sua ainda está em aberto.</h2>
+    <div class="wrap wrap-narrow center-block">
+      <h2 class="text-center" data-reveal>A história do Hernane já foi escrita. A sua ainda está em aberto.</h2>
       <p class="cta-mid-text" data-reveal data-delay="1">Ele começou do mesmo lugar que você. Com menos recurso, menos experiência e mais dificuldade. O que fez a diferença foi uma decisão.</p>
-      <a href="#oferta" class="btn-primary" data-reveal data-delay="2">
+      <a href="#oferta" class="btn-primary btn-full" data-reveal data-delay="2">
         Quero o e-book agora por R$ 67
       </a>
     </div>
@@ -341,7 +343,7 @@
   <!-- ====== FAQ ====== -->
   <section class="section bg-main" id="faq">
     <div class="wrap wrap-narrow">
-      <h2 style="text-align:center;" data-reveal>Dúvidas frequentes</h2>
+      <h2 class="text-center" data-reveal>Dúvidas frequentes</h2>
 
       <div class="faq-list" data-reveal data-delay="1">
         <details class="faq-item" open>
@@ -351,7 +353,6 @@
           </summary>
           <p>Sim. Assim que o pagamento é confirmado, o e-book é enviado automaticamente para o seu e-mail. Normalmente leva menos de 2 minutos.</p>
         </details>
-
         <details class="faq-item">
           <summary>
             <span>Funciona no celular?</span>
@@ -359,7 +360,6 @@
           </summary>
           <p>Funciona em qualquer dispositivo. O PDF foi otimizado para leitura no celular, tablet e computador.</p>
         </details>
-
         <details class="faq-item">
           <summary>
             <span>Tenho prazo para acessar?</span>
@@ -367,7 +367,6 @@
           </summary>
           <p>Não. O acesso é seu para sempre. Baixe e guarde onde quiser.</p>
         </details>
-
         <details class="faq-item">
           <summary>
             <span>Isso funciona para quem está começando do zero?</span>
@@ -375,7 +374,6 @@
           </summary>
           <p>Sim. O e-book foi escrito justamente para quem está no começo. Os capítulos seguem a jornada na ordem em que as decisões precisam ser tomadas.</p>
         </details>
-
         <details class="faq-item">
           <summary>
             <span>Isso é um curso com vídeos?</span>
@@ -383,7 +381,6 @@
           </summary>
           <p>Não. É um e-book em PDF, leitura direta. Sem área de membros, sem login, sem plataforma para aprender a usar.</p>
         </details>
-
         <details class="faq-item">
           <summary>
             <span>E se eu não gostar?</span>
@@ -397,81 +394,79 @@
 
   <!-- ====== CTA FINAL ====== -->
   <section class="section bg-final-cta" id="cta-final">
-    <div class="wrap wrap-narrow" style="text-align:center;">
-      <p class="label" data-reveal style="justify-content:center;">Última chance</p>
-      <h2 data-reveal data-delay="1" style="text-align:center;">O preço de R$ 67 é de lançamento.</h2>
+    <div class="wrap wrap-narrow center-block">
+      <p class="label label-center" data-reveal>Última chance</p>
+      <h2 class="text-center" data-reveal data-delay="1">O preço de R$ 67 é de lançamento.</h2>
       <p class="final-text" data-reveal data-delay="2">Após o período de lançamento, o valor sobe para R$ 97. Garanta agora pelo menor preço.</p>
 
-      <a href="#oferta" class="btn-primary btn-full" data-reveal data-delay="3">
+      <a href="#oferta" class="btn-primary btn-full btn-final" data-reveal data-delay="3">
         Garantir meu e-book por R$ 67
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
 
       <p class="trust-row" data-reveal data-delay="4">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        Pagamento seguro &nbsp;·&nbsp; Entrega imediata &nbsp;·&nbsp; 7 dias de garantia
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Pagamento seguro · Entrega imediata · 7 dias de garantia
       </p>
     </div>
   </section>
 
   <!-- ====== RODAPÉ ====== -->
   <footer class="footer">
-    <div class="wrap" style="text-align:center;">
+    <div class="wrap text-center">
       <p>Hernane Ferreira · Do Zero às Duas Academias</p>
       <p class="footer-copy">© 2026 · Todos os direitos reservados</p>
     </div>
   </footer>
 
-  <!-- ====== SCRIPTS ====== -->
   <script>
-    /* Scroll Reveal */
-    (function () {
-      const els = document.querySelectorAll('[data-reveal]');
-      if (!els.length) return;
-      const io = new IntersectionObserver(
-        (entries) => entries.forEach(e => {
-          if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
-        }),
-        { threshold: 0.1, rootMargin: '0px 0px -36px 0px' }
-      );
-      els.forEach(el => io.observe(el));
-    })();
+  /* ─── Scroll Reveal ──────────────────────────────── */
+  (function () {
+    const io = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }),
+      { threshold: 0.1, rootMargin: '0px 0px -32px 0px' }
+    );
+    document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+  })();
 
-    /* Counter animation */
-    (function () {
-      const counters = document.querySelectorAll('[data-counter]');
-      if (!counters.length) return;
-      const ease = t => 1 - Math.pow(1 - t, 3);
+  /* ─── Stagger reveal para containers com .stagger ── */
+  (function () {
+    const io = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('stagger--vis'); io.unobserve(e.target); } }),
+      { threshold: 0.08, rootMargin: '0px 0px -24px 0px' }
+    );
+    document.querySelectorAll('.stagger').forEach(el => io.observe(el));
+  })();
 
-      function run(el) {
-        const target = parseFloat(el.dataset.target) || 0;
-        const prefix = el.dataset.prefix || '';
-        const suffix = el.dataset.suffix || '';
-        if (target === 0) { el.textContent = prefix + '0' + suffix; return; }
-        const dur = 1500, start = performance.now();
-        const step = now => {
-          const p = Math.min((now - start) / dur, 1);
-          el.textContent = prefix + Math.round(ease(p) * target) + suffix;
-          if (p < 1) requestAnimationFrame(step);
-        };
-        requestAnimationFrame(step);
-      }
+  /* ─── Contador animado ──────────────────────────── */
+  (function () {
+    const ease = t => t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t+2, 3)/2;
+    function run(el) {
+      const target = parseFloat(el.dataset.target) || 0;
+      const prefix = el.dataset.prefix || '';
+      const suffix = el.dataset.suffix || '';
+      if (target === 0) { el.textContent = prefix + '0' + suffix; return; }
+      const dur = 1600, t0 = performance.now();
+      const tick = now => {
+        const p = Math.min((now - t0) / dur, 1);
+        el.textContent = prefix + Math.round(ease(p) * target) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }
+    const io = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) { run(e.target); io.unobserve(e.target); } }),
+      { threshold: 0.6 }
+    );
+    document.querySelectorAll('[data-counter]').forEach(el => io.observe(el));
+  })();
 
-      const io = new IntersectionObserver(
-        (entries) => entries.forEach(e => { if (e.isIntersecting) { run(e.target); io.unobserve(e.target); } }),
-        { threshold: 0.5 }
-      );
-      counters.forEach(el => io.observe(el));
-    })();
-
-    /* FAQ: fecha outros ao abrir um */
-    (function () {
-      document.querySelectorAll('.faq-item').forEach(item => {
-        item.addEventListener('toggle', () => {
-          if (item.open) document.querySelectorAll('.faq-item').forEach(o => { if (o !== item) o.open = false; });
-        });
-      });
-    })();
+  /* ─── FAQ: fecha outros ao abrir ────────────────── */
+  (function () {
+    const items = document.querySelectorAll('.faq-item');
+    items.forEach(item => item.addEventListener('toggle', () => {
+      if (item.open) items.forEach(o => { if (o !== item) o.open = false; });
+    }));
+  })();
   </script>
 
 </body>
